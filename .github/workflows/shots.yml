@@ -22,7 +22,7 @@ jobs:
           node-version: 20
       - run: npm install playwright
       - run: npx playwright install --with-deps chromium
-      - run: sudo apt-get install -y webp
+      - run: sudo apt-get install -y libjxl-tools imagemagick
       - run: node shoot.mjs
         env:
           SHOTS_KEY: ${{ secrets.SHOTS_KEY }}
